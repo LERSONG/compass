@@ -30,6 +30,11 @@ export const apiTekton = new KubeJsonApi({
     apiPrefix: clientVars.API_PREFIX.TEKTON,
 });
 
+export const apiJob = new KubeJsonApi({
+    debug: !clientVars.IS_PRODUCTION,
+    apiPrefix: clientVars.API_PREFIX.JOB,
+});
+
 export const apiService = new KubeJsonApi({
     debug: !clientVars.IS_PRODUCTION,
     apiPrefix: clientVars.API_PREFIX.SERVICE

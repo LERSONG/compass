@@ -1,0 +1,17 @@
+// Jobs
+$job-complete: $colorSuccess;
+$job-failed: $colorError;
+
+// Job Conditions
+$job-condition-color-list: (
+        complete: $job-complete,
+        failed: $job-failed,
+);
+
+@mixin job-condition-colors {
+  @each $condition, $color in $job-condition-color-list {
+    &.#{$condition} {
+      color: $color;
+    }
+  }
+}

@@ -24,12 +24,12 @@ export const daemonSetsRoute: RouteProps = {
 export const statefulSetsRoute: RouteProps = {
   path: "/statefulsets"
 }
-export const jobsRoute: RouteProps = {
-  path: "/jobs"
-}
-export const cronJobsRoute: RouteProps = {
-  path: "/cronjobs"
-}
+// export const jobsRoute: RouteProps = {
+//   path: "/jobs"
+// }
+// export const cronJobsRoute: RouteProps = {
+//   path: "/cronjobs"
+// }
 
 export const stonesRoute: RouteProps = {
   path: "/stones"
@@ -80,11 +80,11 @@ export interface IWatersRouteParams {
 export interface IEnhanceStatefulSetsRouteParams {
 }
 
-export interface IJobsRouteParams {
-}
-
-export interface ICronJobsRouteParams {
-}
+// export interface IJobsRouteParams {
+// }
+//
+// export interface ICronJobsRouteParams {
+// }
 
 export interface IStonesRouteParams {
 }
@@ -96,8 +96,8 @@ export const podsURL = buildURL<IPodsRouteParams>(podsRoute.path)
 export const deploymentsURL = buildURL<IDeploymentsRouteParams>(deploymentsRoute.path)
 export const daemonSetsURL = buildURL<IDaemonSetsRouteParams>(daemonSetsRoute.path)
 export const statefulSetsURL = buildURL<IStatefulSetsRouteParams>(statefulSetsRoute.path)
-export const jobsURL = buildURL<IJobsRouteParams>(jobsRoute.path)
-export const cronJobsURL = buildURL<ICronJobsRouteParams>(cronJobsRoute.path)
+// export const jobsURL = buildURL<IJobsRouteParams>(jobsRoute.path)
+// export const cronJobsURL = buildURL<ICronJobsRouteParams>(cronJobsRoute.path)
 export const stonesURL = buildURL<IStonesRouteParams>(stonesRoute.path)
 export const enhanceStatefulSetsURL = buildURL<IEnhanceStatefulSetsRouteParams>(enhanceStatefulsetsRoute.path)
 export const injectorURL = buildURL<InjectorsRouteParams>(injectorsRoute.path)

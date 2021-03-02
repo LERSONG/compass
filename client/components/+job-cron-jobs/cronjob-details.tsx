@@ -6,7 +6,7 @@ import { observer } from "mobx-react";
 import { Trans } from "@lingui/macro";
 import { DrawerItem, DrawerTitle } from "../drawer";
 import { Badge } from "../badge/badge";
-import { jobStore } from "../+workloads-jobs/job.store";
+import { jobStore } from "../+job-jobs/job.store";
 import { Link } from "react-router-dom";
 import { KubeEventDetails } from "../+events/kube-event-details";
 import { cronJobStore } from "./cronjob.store";

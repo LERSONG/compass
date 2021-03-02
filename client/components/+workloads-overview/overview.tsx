@@ -15,8 +15,8 @@ import { replicaSetStore } from "../+workloads-replicasets/replicasets.store";
 import { enhanceStatefulSetStore } from "../+workloads-enhancestatefulsets/enhancestatefulset.store"
 import { stoneStore } from "../+workloads-stones/stones.store"
 import { waterStore } from "../+workloads-waters/waters.store"
-import { jobStore } from "../+workloads-jobs/job.store";
-import { cronJobStore } from "../+workloads-cronjobs/cronjob.store";
+import { jobStore } from "../+job-jobs/job.store";
+import { cronJobStore } from "../+job-cron-jobs/cronjob.store";
 import { Spinner } from "../spinner";
 import { Events } from "../+events";
 

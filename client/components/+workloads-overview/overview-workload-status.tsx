@@ -13,8 +13,8 @@ import { podsStore } from "../+workloads-pods/pods.store";
 import { deploymentStore } from "../+workloads-deployments/deployments.store";
 import { daemonSetStore } from "../+workloads-daemonsets/daemonsets.store";
 import { statefulSetStore } from "../+workloads-statefulsets/statefulset.store";
-import { jobStore } from "../+workloads-jobs/job.store";
-import { cronJobStore } from "../+workloads-cronjobs/cronjob.store";
+import { jobStore } from "../+job-jobs/job.store";
+import { cronJobStore } from "../+job-cron-jobs/cronjob.store";
 import { namespaceStore } from "../+namespaces/namespace.store";
 import { enhanceStatefulSetStore } from "../+workloads-enhancestatefulsets/enhancestatefulset.store"
 import { stoneStore } from "../+workloads-stones/stones.store"

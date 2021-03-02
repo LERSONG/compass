@@ -2,12 +2,22 @@ import "./overview-statuses.scss"
 
 import React from "react";
 import store from "store";
-import { observer } from "mobx-react";
-import { Trans } from "@lingui/macro";
-import { OverviewWorkloadStatus } from "./overview-workload-status";
-import { cronJobsURL, daemonSetsURL, deploymentsURL, jobsURL, podsURL, statefulSetsURL, enhanceStatefulSetsURL, stonesURL, watersURL } from "../+workloads";
-import { PageFiltersList } from "../item-object-list/page-filters-list";
-import { NamespaceSelectFilter } from "../+namespaces/namespace-select";
+import {observer} from "mobx-react";
+import {Trans} from "@lingui/macro";
+import {OverviewWorkloadStatus} from "./overview-workload-status";
+import {
+    daemonSetsURL,
+    deploymentsURL,
+    enhanceStatefulSetsURL,
+    podsURL,
+    statefulSetsURL,
+    stonesURL,
+    watersURL
+} from "../+workloads";
+import {PageFiltersList} from "../item-object-list/page-filters-list";
+import {NamespaceSelectFilter} from "../+namespaces/namespace-select";
+import {cronJobsURL, jobsURL} from "../+job";
+
 
 @observer
 export class OverviewStatuses extends React.Component {

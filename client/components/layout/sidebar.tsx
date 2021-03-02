@@ -1,37 +1,32 @@
 import "./sidebar.scss";
 
 import * as React from "react";
-import { computed, observable, reaction } from "mobx";
-import { observer } from "mobx-react";
-import { matchPath, NavLink } from "react-router-dom";
-import { Trans } from "@lingui/macro";
-import { createStorage, cssNames } from "../../utils";
-import { Icon } from "../icon";
-import { workloadsRoute, workloadsURL } from "../+workloads";
-import { namespacesURL } from "../+namespaces";
-import { nodesURL } from "../+nodes";
-import { usersManagementRoute, usersManagementURL } from "../+user-management";
-import { networkRoute, networkURL } from "../+network";
-import { storageRoute, storageURL } from "../+storage";
-import { clusterURL } from "../+cluster";
-import { tektonURL, tektonRoute, Tekton } from "../+tekton";
-import { Istio, istioRoute, istioGatewayURL } from "../+istio";
-import { ovnURL, ovnRoute, Ovn } from "../+ovn";
-import { Config, configRoute, configURL } from "../+config";
-import { eventRoute, eventsURL } from "../+events";
-import { tenantRoute, tenantURL, Tenant } from "../+tenant";
-import { Apps, appsRoute, appsURL } from "../+apps";
-import { namespaceStore } from "../+namespaces/namespace.store";
-import { TabRoute } from "./main-layout";
-import { Workloads } from "../+workloads";
-import { UserManagement } from "../+user-management";
-import { Storage } from "../+storage";
-import { Network } from "../+network";
-import { crdStore } from "../+custom-resources";
-import { CrdList, crdResourcesRoute, crdRoute, crdURL } from "../+custom-resources";
-import { CustomResources } from "../+custom-resources/custom-resources";
-import { navigation } from "../../navigation";
+import {computed, observable, reaction} from "mobx";
+import {observer} from "mobx-react";
+import {matchPath, NavLink} from "react-router-dom";
+import {Trans} from "@lingui/macro";
+import {createStorage, cssNames} from "../../utils";
+import {Icon} from "../icon";
+import {Workloads, workloadsRoute, workloadsURL} from "../+workloads";
+import {namespacesURL} from "../+namespaces";
+import {nodesURL} from "../+nodes";
+import {UserManagement, usersManagementRoute, usersManagementURL} from "../+user-management";
+import {Network, networkRoute, networkURL} from "../+network";
+import {Storage, storageRoute, storageURL} from "../+storage";
+import {clusterURL} from "../+cluster";
+import {Tekton, tektonRoute, tektonURL} from "../+tekton";
+import {Istio, istioGatewayURL, istioRoute} from "../+istio";
+import {Ovn, ovnRoute, ovnURL} from "../+ovn";
+import {Config, configRoute, configURL} from "../+config";
+import {Tenant, tenantRoute, tenantURL} from "../+tenant";
+import {Apps, appsRoute, appsURL} from "../+apps";
+import {namespaceStore} from "../+namespaces/namespace.store";
+import {TabRoute} from "./main-layout";
+import {CrdList, crdResourcesRoute, crdRoute, crdStore, crdURL} from "../+custom-resources";
+import {CustomResources} from "../+custom-resources/custom-resources";
+import {navigation} from "../../navigation";
 import store from 'store'
+import {Job, jobRoute, jobsURL} from "../+job";
 
 const SidebarContext = React.createContext<SidebarContextValue>({ pinned: false });
 type SidebarContextValue = {
@@ -114,6 +109,15 @@ export class Sidebar extends React.Component<Props> {
               subMenus={Workloads.tabRoutes}
               text={<Trans>Workloads</Trans>}
               icon={<Icon svg="workloads" />}
+            />
+            <SidebarNavItem
+                id="job"
+                isHidden={!isClusterAdmin}
+                url={jobsURL({ query })}
+                routePath={jobRoute.path}
+                subMenus={Job.tabRoutes}
+                text={<Trans>Job</Trans>}
+                icon={<Icon material="palette" />}
             />
             <SidebarNavItem
               id="tekton"

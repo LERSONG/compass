@@ -10,7 +10,7 @@ import { eventStore } from "../+events/event.store";
 import { Job, jobApi } from "../../api/endpoints/job.api";
 import { KubeObjectMenu, KubeObjectMenuProps } from "../kube-object/kube-object-menu";
 import { KubeObjectListLayout } from "../kube-object";
-import { IJobsRouteParams } from "../+workloads";
+import { IJobsRouteParams } from "../+job";
 import { KubeEventIcon } from "../+events/kube-event-icon";
 import kebabCase from "lodash/kebabCase";
 import { apiManager } from "../../api/api-manager";

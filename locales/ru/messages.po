@@ -580,7 +580,7 @@ msgstr "Credentials Ref"
 msgid "Cron Jobs"
 msgstr ""
 
-#: client/components/+workloads/workloads.tsx:64
+#: client/components/+workloads/job.tsx:64
 #: client/components/+workloads-overview/overview-statuses.tsx:60
 msgid "CronJobs"
 msgstr "CronJobs"
@@ -614,7 +614,7 @@ msgstr "DNS имена"
 msgid "Daemon Sets"
 msgstr ""
 
-#: client/components/+workloads/workloads.tsx:46
+#: client/components/+workloads/job.tsx:46
 #: client/components/+workloads-overview/overview-statuses.tsx:52
 msgid "DaemonSets"
 msgstr "DaemonSets"
@@ -648,7 +648,7 @@ msgstr "Удалить"
 msgid "Deploy Revisions"
 msgstr ""
 
-#: client/components/+workloads/workloads.tsx:40
+#: client/components/+workloads/job.tsx:40
 #: client/components/+workloads-deployments/deployments.tsx:57
 #: client/components/+workloads-overview/overview-statuses.tsx:44
 msgid "Deployments"
@@ -964,7 +964,7 @@ msgstr "Список пуст"
 msgid "JSON Path"
 msgstr ""
 
-#: client/components/+workloads/workloads.tsx:58
+#: client/components/+workloads/job.tsx:58
 #: client/components/+workloads-cronjobs/cronjob-details.tsx:62
 #: client/components/+workloads-jobs/jobs.tsx:36
 #: client/components/+workloads-overview/overview-statuses.tsx:56
@@ -1446,7 +1446,7 @@ msgstr "Оператор"
 msgid "Organization"
 msgstr "Организация"
 
-#: client/components/+workloads/workloads.tsx:28
+#: client/components/+workloads/job.tsx:28
 #: client/components/+workloads-overview/overview-statuses.tsx:34
 msgid "Overview"
 msgstr "Обзор"
@@ -1513,7 +1513,7 @@ msgstr "Командная строка пода"
 #: client/components/+nodes/node-details.tsx:80
 #: client/components/+storage-volume-claims/volume-claim-details.tsx:60
 #: client/components/+storage-volume-claims/volume-claims.tsx:50
-#: client/components/+workloads/workloads.tsx:34
+#: client/components/+workloads/job.tsx:34
 #: client/components/+workloads-daemonsets/daemonsets.tsx:47
 #: client/components/+workloads-deployments/deployments.tsx:60
 #: client/components/+workloads-overview/overview-statuses.tsx:40
@@ -2013,7 +2013,7 @@ msgstr "Заданные лимиты выше вместимости ноды!"
 msgid "Stateful Sets"
 msgstr ""
 
-#: client/components/+workloads/workloads.tsx:52
+#: client/components/+workloads/job.tsx:52
 #: client/components/+workloads-overview/overview-statuses.tsx:48
 msgid "StatefulSets"
 msgstr "StatefulSets"

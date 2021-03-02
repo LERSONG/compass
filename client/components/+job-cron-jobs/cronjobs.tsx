@@ -1,18 +1,18 @@
 import "./cronjobs.scss";
 
 import React from "react";
-import { observer } from "mobx-react";
-import { RouteComponentProps } from "react-router";
-import { Trans } from "@lingui/macro";
-import { CronJob, cronJobApi } from "../../api/endpoints/cron-job.api";
-import { cronJobStore } from "./cronjob.store";
-import { jobStore } from "../+workloads-jobs/job.store";
-import { eventStore } from "../+events/event.store";
-import { KubeObjectMenu, KubeObjectMenuProps } from "../kube-object/kube-object-menu";
-import { ICronJobsRouteParams } from "../+workloads";
-import { KubeObjectListLayout } from "../kube-object";
-import { KubeEventIcon } from "../+events/kube-event-icon";
-import { apiManager } from "../../api/api-manager";
+import {observer} from "mobx-react";
+import {RouteComponentProps} from "react-router";
+import {Trans} from "@lingui/macro";
+import {CronJob, cronJobApi} from "../../api/endpoints/cron-job.api";
+import {cronJobStore} from "./cronjob.store";
+import {jobStore} from "../+job-jobs/job.store";
+import {eventStore} from "../+events/event.store";
+import {KubeObjectMenu, KubeObjectMenuProps} from "../kube-object/kube-object-menu";
+import {ICronJobsRouteParams} from "../+job";
+import {KubeObjectListLayout} from "../kube-object";
+import {KubeEventIcon} from "../+events/kube-event-icon";
+import {apiManager} from "../../api/api-manager";
 
 enum sortBy {
   name = "name",

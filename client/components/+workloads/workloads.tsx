@@ -17,14 +17,14 @@ import {
   enhanceStatefulsetsRoute,
   stonesURL,
   stonesRoute,
-  cronJobsRoute,
-  cronJobsURL,
+  // cronJobsRoute,
+  // cronJobsURL,
   daemonSetsRoute,
   daemonSetsURL,
   deploymentsRoute,
   deploymentsURL,
-  jobsRoute,
-  jobsURL,
+  // jobsRoute,
+  // jobsURL,
   overviewRoute,
   overviewURL,
   podsRoute,
@@ -40,8 +40,8 @@ import { Pods } from "../+workloads-pods";
 import { Deployments } from "../+workloads-deployments";
 import { DaemonSets } from "../+workloads-daemonsets";
 import { EnhanceStatefulSets } from "../+workloads-enhancestatefulsets";
-import { Jobs } from "../+workloads-jobs";
-import { CronJobs } from "../+workloads-cronjobs";
+import { Jobs } from "../+job-jobs";
+import { CronJobs } from "../+job-cron-jobs";
 import { Stones } from "../+workloads-stones";
 import { Deploys } from "../+workloads-deploy";
 import { StatefulSets } from "../+workloads-statefulsets";
@@ -122,18 +122,18 @@ export class Workloads extends React.Component<Props> {
           url: statefulSetsURL({ query }),
           path: statefulSetsRoute.path,
         },
-        {
-          title: <Trans>Jobs</Trans>,
-          component: Jobs,
-          url: jobsURL({ query }),
-          path: jobsRoute.path,
-        },
-        {
-          title: <Trans>CronJobs</Trans>,
-          component: CronJobs,
-          url: cronJobsURL({ query }),
-          path: cronJobsRoute.path,
-        },
+        // {
+        //   title: <Trans>Jobs</Trans>,
+        //   component: Jobs,
+        //   url: jobsURL({ query }),
+        //   path: jobsRoute.path,
+        // },
+        // {
+        //   title: <Trans>CronJobs</Trans>,
+        //   component: CronJobs,
+        //   url: cronJobsURL({ query }),
+        //   path: cronJobsRoute.path,
+        // },
       )
     }
 
