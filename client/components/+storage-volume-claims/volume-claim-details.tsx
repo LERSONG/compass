@@ -6,7 +6,7 @@ import { disposeOnUnmount, observer } from "mobx-react";
 import { t, Trans } from "@lingui/macro";
 import { DrawerItem, DrawerTitle } from "../drawer";
 import { Badge } from "../badge";
-import { podsStore } from "../+workloads-pods/pods.store";
+import { podsStore } from "../+orchestration-pods/pods.store";
 import { Link } from "react-router-dom";
 import { KubeEventDetails } from "../+events/kube-event-details";
 import { volumeClaimStore } from "./volume-claim.store";

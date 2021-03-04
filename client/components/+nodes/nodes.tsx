@@ -8,7 +8,7 @@ import { cssNames, interval } from "../../utils";
 import { themeStore } from "../../theme.store";
 import { MainLayout } from "../layout/main-layout";
 import { nodesStore } from "./nodes.store";
-import { podsStore } from "../+workloads-pods/pods.store";
+import { podsStore } from "../+orchestration-pods/pods.store";
 import { KubeObjectListLayout } from "../kube-object";
 import { INodesRouteParams } from "./nodes.route";
 import { Node, nodesApi } from "../../api/endpoints/nodes.api";

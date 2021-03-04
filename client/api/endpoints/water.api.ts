@@ -3,6 +3,7 @@ import { IPodContainer } from "./pods.api";
 import { IAffinity, WorkloadKubeObject } from "../workload-kube-object";
 import { autobind } from "../../utils";
 import { KubeApi } from "../kube-api";
+import {apiEnhancedOrchestration} from "../index";
 
 @autobind()
 export class Water extends WorkloadKubeObject {
@@ -79,4 +80,5 @@ export const waterApi = new KubeApi({
   apiBase: "/apis/nuwa.nip.io/v1/waters",
   isNamespaced: true,
   objectConstructor: Water,
+  request: apiEnhancedOrchestration,
 });

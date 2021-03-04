@@ -2,24 +2,24 @@ import "./overview-workload-status.scss";
 
 import React from "react";
 import capitalize from "lodash/capitalize";
-import { findDOMNode } from 'react-dom';
-import { observable } from "mobx";
-import { observer } from "mobx-react";
-import { PieChart } from "../chart";
-import { cssVar } from "../../utils";
-import { ChartData } from "chart.js";
-import { themeStore } from "../../theme.store";
-import { podsStore } from "../+workloads-pods/pods.store";
-import { deploymentStore } from "../+workloads-deployments/deployments.store";
-import { daemonSetStore } from "../+workloads-daemonsets/daemonsets.store";
-import { statefulSetStore } from "../+workloads-statefulsets/statefulset.store";
-import { jobStore } from "../+workloads-jobs/job.store";
-import { cronJobStore } from "../+workloads-cronjobs/cronjob.store";
-import { namespaceStore } from "../+namespaces/namespace.store";
-import { enhanceStatefulSetStore } from "../+workloads-enhancestatefulsets/enhancestatefulset.store"
-import { stoneStore } from "../+workloads-stones/stones.store"
-import { waterStore } from "../+workloads-waters/waters.store";
-import { Link } from "react-router-dom";
+import {findDOMNode} from 'react-dom';
+import {observable} from "mobx";
+import {observer} from "mobx-react";
+import {PieChart} from "../chart";
+import {cssVar} from "../../utils";
+import {ChartData} from "chart.js";
+import {themeStore} from "../../theme.store";
+import {podsStore} from "../+orchestration-pods/pods.store";
+import {deploymentStore} from "../+orchestration-deployments/deployments.store";
+import {daemonSetStore} from "../+orchestration-daemonsets/daemonsets.store";
+import {statefulSetStore} from "../+orchestration-statefulsets/statefulset.store";
+import {jobStore} from "../+job-jobs/job.store";
+import {cronJobStore} from "../+job-cronjobs/cronjob.store";
+import {namespaceStore} from "../+namespaces/namespace.store";
+import {enhanceStatefulSetStore} from "../+enhancedorchestration-enhancestatefulsets/enhancestatefulset.store"
+import {stoneStore} from "../+enhancedorchestration-stones/stones.store"
+import {waterStore} from "../+enhancedorchestration-waters/waters.store";
+import {Link} from "react-router-dom";
 
 interface Props {
   type: string,

@@ -7,7 +7,7 @@ import { Trans } from "@lingui/macro";
 import { volumeClaimStore } from "./volume-claim.store";
 import { PersistentVolumeClaim, pvcApi } from "../../api/endpoints/persistent-volume-claims.api";
 import { KubeObjectMenu, KubeObjectMenuProps } from "../kube-object/kube-object-menu";
-import { podsStore } from "../+workloads-pods/pods.store";
+import { podsStore } from "../+orchestration-pods/pods.store";
 import { KubeObjectListLayout } from "../kube-object";
 import { IVolumeClaimsRouteParams } from "./volume-claims.route";
 import { unitsToBytes } from "../../utils/convertMemory";

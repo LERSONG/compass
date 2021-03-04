@@ -57,6 +57,27 @@ export default () => {
           secure: false,
           changeOrigin: true,
         },
+        '/orchestration/': {
+          target: 'http://127.0.0.1:8080/',
+          secure: false,
+          changeOrigin: true,
+        },
+        '/enhancedorchestration/': {
+          target: 'http://127.0.0.1:8080/',
+          secure: false,
+          changeOrigin: true,
+        },
+        '/job/': {
+          target: 'http://127.0.0.1:8080/',
+          secure: false,
+          changeOrigin: true,
+        },
+        '/magpie/': {
+          target: 'http://127.0.0.1:8080/',
+          ws: true,
+          secure: false,
+          changeOrigin: true,
+        },
         '/service/': {
           target: 'http://127.0.0.1:8080/',
           secure: false,

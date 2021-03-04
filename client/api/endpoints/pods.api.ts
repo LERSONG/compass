@@ -2,6 +2,7 @@ import {IAffinity, WorkloadKubeObject} from "../workload-kube-object";
 import {autobind} from "../../utils";
 import {IMetrics, metricsApi} from "./metrics.api";
 import {KubeApi} from "../kube-api";
+import {apiOrchestration} from "../index";
 
 export class PodsApi extends KubeApi<Pod> {
   async getTerminalSession(params: {
@@ -472,4 +473,5 @@ export const podsApi = new PodsApi({
   apiBase: "/api/v1/pods",
   isNamespaced: true,
   objectConstructor: Pod,
+  request: apiOrchestration,
 });

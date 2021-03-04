@@ -10,12 +10,12 @@ import { Badge } from "../badge";
 import { TooltipContent } from "../tooltip";
 import { nodesStore } from "./nodes.store";
 import { ResourceMetrics } from "../resource-metrics";
-import { podsStore } from "../+workloads-pods/pods.store";
+import { podsStore } from "../+orchestration-pods/pods.store";
 import { KubeObjectDetailsProps } from "../kube-object";
 import { Node, nodesApi } from "../../api/endpoints";
 import { NodeCharts } from "./node-charts";
 import { reaction } from "mobx";
-import { PodDetailsList } from "../+workloads-pods/pod-details-list";
+import { PodDetailsList } from "../+orchestration-pods/pod-details-list";
 import { apiManager } from "../../api/api-manager";
 import { KubeObjectMeta } from "../kube-object/kube-object-meta";
 

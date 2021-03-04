@@ -5,7 +5,7 @@ import { autobind } from "../../utils";
 import { eventApi, KubeEvent } from "../../api/endpoints/events.api";
 import { KubeObject } from "../../api/kube-object";
 import { Pod } from "../../api/endpoints/pods.api";
-import { podsStore } from "../+workloads-pods/pods.store";
+import { podsStore } from "../+orchestration-pods/pods.store";
 import { apiManager } from "../../api/api-manager";
 
 @autobind()

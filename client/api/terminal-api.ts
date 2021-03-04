@@ -3,6 +3,7 @@ import { autobind, base64, EventEmitter, interval } from "../utils";
 import { WebSocketApi } from "./websocket-api";
 import { configStore } from "../config.store";
 import isEqual from "lodash/isEqual";
+import {TerminalSession} from "./endpoints";
 
 // tslint:disable-next-line:no-any
 
@@ -68,9 +69,10 @@ export class TerminalApi extends WebSocketApi {
     const { hostname, protocol } = location;
     const wss = `http${protocol === "https:" ? "s" : ""}://`;
     console.log(
-      `${wss}${hostname}${configStore.serverPort}/workload/shell/pod`
+      `${wss}${hostname}${configStore.serverPort}/magpie/shell/pod`
+      // `${wss}${hostname}${configStore.serverPort}/workload/shell/pod`
     );
-    return `${wss}${hostname}${configStore.serverPort}/workload/shell/pod`;
+    return `${wss}${hostname}${configStore.serverPort}/magpie/shell/pod`;
   }
 
   async connect() {

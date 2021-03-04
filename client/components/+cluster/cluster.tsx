@@ -11,7 +11,7 @@ import { cssNames, interval, isElectron } from "../../utils";
 import { ClusterPieCharts } from "./cluster-pie-charts";
 import { ClusterMetrics } from "./cluster-metrics";
 import { nodesStore } from "../+nodes/nodes.store";
-import { podsStore } from "../+workloads-pods/pods.store";
+import { podsStore } from "../+orchestration-pods/pods.store";
 import { clusterStore } from "./cluster.store";
 import { eventStore } from "../+events/event.store";
 import { themeStore } from "../../theme.store";

@@ -55,7 +55,7 @@ export class ClusterIssues extends React.Component<Props> {
       })
     });
 
-    // Warning events for Workloads
+    // Warning events for Orchestration
     const events = eventStore.getWarnings();
     events.forEach(error => {
       const { message, involvedObject } = error;

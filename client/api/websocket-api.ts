@@ -1,7 +1,9 @@
-import { observable } from "mobx";
-import { EventEmitter } from "../utils/eventEmitter";
+import {observable} from "mobx";
+import {EventEmitter} from "../utils/eventEmitter";
 import SockJS from "sockjs-client";
-import { podsApi } from "../api/endpoints";
+import {podsApi} from "../api/endpoints";
+import axios from "axios";
+import store from "store";
 
 const welcome = `
 Yame Container Cloud Platform === \r\n
@@ -146,14 +148,27 @@ export class WebSocketApi {
   }
 
   async refreshSession() {
-    const apiSession = await podsApi.getTerminalSession({
+    const userConfig = store.get('u_config')
+    const token = userConfig.token
+    let podSessionUrl = podsApi.getPodSessionUrl({
       namespace: this.namespace,
       pod: this.pod,
       container: this.container,
       shellType: this.shellType,
     });
-    this.op = apiSession.op;
-    this.sessionId = apiSession.sessionId;
+    axios.get("/magpie" + podSessionUrl,{headers:{Authorization:token}})
+        .then((res: any) => {
+          this.op = res.data.op;
+          this.sessionId = res.data.sessionId;
+    })
+    // const apiSession = await podsApi.getTerminalSession({
+    //   namespace: this.namespace,
+    //   pod: this.pod,
+    //   container: this.container,
+    //   shellType: this.shellType,
+    // });
+    // this.op = apiSession.op;
+    // this.sessionId = apiSession.sessionId;
   }
 
   removeAllListeners() {

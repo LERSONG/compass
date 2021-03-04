@@ -1,24 +1,24 @@
 import "./overview.scss"
 
 import React from "react";
-import { observable, when } from "mobx";
-import { observer } from "mobx-react";
-import { OverviewStatuses } from "./overview-statuses";
-import { RouteComponentProps } from "react-router";
-import { IWorkloadsOverviewRouteParams } from "../+workloads";
-import { eventStore } from "../+events/event.store";
-import { podsStore } from "../+workloads-pods/pods.store";
-import { deploymentStore } from "../+workloads-deployments/deployments.store";
-import { daemonSetStore } from "../+workloads-daemonsets/daemonsets.store";
-import { statefulSetStore } from "../+workloads-statefulsets/statefulset.store";
-import { replicaSetStore } from "../+workloads-replicasets/replicasets.store";
-import { enhanceStatefulSetStore } from "../+workloads-enhancestatefulsets/enhancestatefulset.store"
-import { stoneStore } from "../+workloads-stones/stones.store"
-import { waterStore } from "../+workloads-waters/waters.store"
-import { jobStore } from "../+workloads-jobs/job.store";
-import { cronJobStore } from "../+workloads-cronjobs/cronjob.store";
-import { Spinner } from "../spinner";
-import { Events } from "../+events";
+import {observable, when} from "mobx";
+import {observer} from "mobx-react";
+import {OverviewStatuses} from "./overview-statuses";
+import {RouteComponentProps} from "react-router";
+import {IWorkloadsOverviewRouteParams} from "../+workloads";
+import {eventStore} from "../+events/event.store";
+import {podsStore} from "../+orchestration-pods/pods.store";
+import {deploymentStore} from "../+orchestration-deployments/deployments.store";
+import {daemonSetStore} from "../+orchestration-daemonsets/daemonsets.store";
+import {statefulSetStore} from "../+orchestration-statefulsets/statefulset.store";
+import {replicaSetStore} from "../+orchestration-replicasets/replicasets.store";
+import {enhanceStatefulSetStore} from "../+enhancedorchestration-enhancestatefulsets/enhancestatefulset.store"
+import {stoneStore} from "../+enhancedorchestration-stones/stones.store"
+import {waterStore} from "../+enhancedorchestration-waters/waters.store"
+import {jobStore} from "../+job-jobs/job.store";
+import {cronJobStore} from "../+job-cronjobs/cronjob.store";
+import {Spinner} from "../spinner";
+import {Events} from "../+events";
 
 interface Props extends RouteComponentProps<IWorkloadsOverviewRouteParams> {
 }

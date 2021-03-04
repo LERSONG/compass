@@ -174,12 +174,18 @@ export abstract class KubeObjectStore<
     if (item.selfLink.startsWith("/apis/networking.istio.io/v1beta1")
       || item.selfLink.startsWith("/apis/tekton.dev/v1alpha1")
       || item.selfLink.startsWith("/apis/yamecloud.io/v1")
+      || item.selfLink.startsWith("/apis/nuwa.nip.io/v1")
       || item.kind === "TektonStore"
       || item.kind === "TektonWebHook"
       || item.kind === "TektonGraph"
       || item.kind === "Service"
       || item.kind === "Endpoint"
       || item.kind === "Ingress"
+      || item.kind === "StatefulSet"
+      || item.kind === "Deployment"
+      || item.kind === "ReplicaSet"
+      || item.kind === "DaemonSet"
+      || item.kind === "Pod"
     ) {
       const itemApi = apiManager.getApi(item.selfLink)
       await itemApi.delete({ name: item.getName(), namespace: item.getNs() })
