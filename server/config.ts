@@ -16,6 +16,7 @@ export const config = {
     BASE: '/api', // local express.js server api
     TENANT: '/base',  // tenant api
     TEKTON: '/tekton', // tekton
+    STORAGE: '/storage', // storage
     WORKLOAD: '/workload', // tekton
     CLUSTER: '/cluster',
     ISTIO: '/servicemesh', // istio

@@ -2,16 +2,17 @@ import "./storage.scss"
 
 import * as React from "react";
 import store from "store";
-import { observer } from "mobx-react";
-import { Redirect, Route, Switch } from "react-router";
-import { RouteComponentProps } from "react-router-dom";
-import { Trans } from "@lingui/macro";
-import { MainLayout, TabRoute } from "../layout/main-layout";
-import { PersistentVolumes, volumesRoute, volumesURL } from "../+storage-volumes";
-import { StorageClasses, storageClassesRoute, storageClassesURL } from "../+storage-classes";
-import { PersistentVolumeClaims, volumeClaimsRoute, volumeClaimsURL } from "../+storage-volume-claims";
-import { namespaceStore } from "../+namespaces/namespace.store";
-import { storageURL } from "./storage.route";
+import {observer} from "mobx-react";
+import {Redirect, Route, Switch} from "react-router";
+import {RouteComponentProps} from "react-router-dom";
+import {Trans} from "@lingui/macro";
+import {MainLayout, TabRoute} from "../layout/main-layout";
+import {PersistentVolumes, volumesRoute, volumesURL} from "../+storage-volumes";
+import {StorageClasses, storageClassesRoute, storageClassesURL} from "../+storage-classes";
+import {PersistentVolumeClaims, volumeClaimsRoute, volumeClaimsURL} from "../+storage-volume-claims";
+import {namespaceStore} from "../+namespaces/namespace.store";
+import {storageURL} from "./storage.route";
+import {cephRBDStorageRoute, CephRBDStorages, cephRBDStorageURL} from "../+storage-ceph-rbd-storage";
 
 interface Props extends RouteComponentProps<{}> {
 }
@@ -31,21 +32,26 @@ export class Storage extends React.Component<Props> {
     })
 
     if (isClusterAdmin) {
-      tabRoutes.push({
-        title: <Trans>Persistent Volumes</Trans>,
-        component: PersistentVolumes,
-        url: volumesURL(),
-        path: volumesRoute.path,
-      });
-    }
-
-    if (isClusterAdmin) {
-      tabRoutes.push({
-        title: <Trans>Storage Classes</Trans>,
-        component: StorageClasses,
-        url: storageClassesURL(),
-        path: storageClassesRoute.path,
-      })
+      tabRoutes.push(
+          {
+            title: <Trans>Persistent Volumes</Trans>,
+            component: PersistentVolumes,
+            url: volumesURL(),
+            path: volumesRoute.path,
+          },
+          {
+            title: <Trans>Storage Classes</Trans>,
+            component: StorageClasses,
+            url: storageClassesURL(),
+            path: storageClassesRoute.path,
+          },
+          {
+            title: <Trans>Ceph RBD Storage</Trans>,
+            component: CephRBDStorages,
+            url: cephRBDStorageURL(),
+            path: cephRBDStorageRoute.path,
+          }
+      );
     }
     return tabRoutes;
   }

@@ -180,6 +180,10 @@ export abstract class KubeObjectStore<
       || item.kind === "Service"
       || item.kind === "Endpoint"
       || item.kind === "Ingress"
+      || item.kind === "CephRBDStorage"
+      || item.kind === "StorageClass"
+      || item.kind === "PersistentVolume"
+      || item.kind === "PersistentVolumeClaim"
     ) {
       const itemApi = apiManager.getApi(item.selfLink)
       await itemApi.delete({ name: item.getName(), namespace: item.getNs() })
