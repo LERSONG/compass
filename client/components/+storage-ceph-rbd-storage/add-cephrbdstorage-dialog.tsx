@@ -117,7 +117,7 @@ export class AddCephRBDStorageDialog extends React.Component<Props> {
           parameters: {
             adminSecretNamespace: params.adminSecretNamespace,
             adminSecretValue: params.adminSecretValue,
-            userSecretValue: params.adminSecretValue,
+            userSecretValue: params.userSecretValue,
             monitors: params.monitors,
             adminId: params.adminId,
             pool: params.pool,
@@ -217,8 +217,8 @@ export class AddCephRBDStorageDialog extends React.Component<Props> {
                 {/*  onChange={value => this.params.adminSecretName = value.value}*/}
                 {/*/>*/}
                 <Input
-                    required autoFocus
-                    validators={systemName}
+                    multiLine maxRows={5}
+                    required
                     placeholder={_i18n._(t`AdminSecretValue`)}
                     value={this.params.adminSecretValue}
                     onChange={(value: string) => this.params.adminSecretValue = value}
@@ -242,8 +242,8 @@ export class AddCephRBDStorageDialog extends React.Component<Props> {
                 {/*  onChange={value => this.params.userSecretName = value.value}*/}
                 {/*/>*/}
                 <Input
-                    required autoFocus
-                    validators={systemName}
+                    multiLine maxRows={5}
+                    required
                     placeholder={_i18n._(t`UserSecretValue`)}
                     value={this.params.userSecretValue}
                     onChange={(value: string) => this.params.userSecretValue = value}

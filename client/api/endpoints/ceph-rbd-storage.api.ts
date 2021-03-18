@@ -37,7 +37,7 @@ export class CephRBDStorage extends KubeObject {
 export const cephRBDStorageApi = new KubeApi({
   kind: CephRBDStorage.kind,
   apiBase: "/apis/yamecloud.io/v1/cephrbdstorages",
-  isNamespaced: false,
+  isNamespaced: true,
   objectConstructor: CephRBDStorage,
   request: apiStorage,
 });
