@@ -180,6 +180,7 @@ export abstract class KubeObjectStore<
       || item.kind === "Service"
       || item.kind === "Endpoint"
       || item.kind === "Ingress"
+      || item.kind === "ZookeeperCluster"
     ) {
       const itemApi = apiManager.getApi(item.selfLink)
       await itemApi.delete({ name: item.getName(), namespace: item.getNs() })

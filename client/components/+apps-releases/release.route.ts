@@ -1,9 +1,8 @@
-import { RouteProps } from "react-router"
-import { appsRoute } from "../+apps/apps.route";
-import { buildURL } from "../../navigation";
+import {RouteProps} from "react-router"
+import {buildURL} from "../../navigation";
 
 export const releaseRoute: RouteProps = {
-  path: appsRoute.path + "/releases/:namespace?/:name?"
+  path: "/apps-releases/:namespace?/:name?"
 }
 
 export interface IReleaseRouteParams {

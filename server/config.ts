@@ -19,6 +19,7 @@ export const config = {
     WORKLOAD: '/workload', // tekton
     CLUSTER: '/cluster',
     ISTIO: '/servicemesh', // istio
+    APPS: '/apps', // apps
     SERVICE: '/service', // service
     TERMINAL: '/api-kube', // terminal api
     KUBE_BASE: '/api-kube', // kubernetes cluster api

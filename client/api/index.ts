@@ -25,6 +25,11 @@ export const apiIstio = new KubeJsonApi({
     apiPrefix: clientVars.TENANT_PREFIX.ISTIO
 });
 
+export const apiApps = new KubeJsonApi({
+    debug: !clientVars.IS_PRODUCTION,
+    apiPrefix: clientVars.TENANT_PREFIX.APPS
+});
+
 export const apiTekton = new KubeJsonApi({
     debug: !clientVars.IS_PRODUCTION,
     apiPrefix: clientVars.API_PREFIX.TEKTON,

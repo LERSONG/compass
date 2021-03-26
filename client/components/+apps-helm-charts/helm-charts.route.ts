@@ -3,7 +3,7 @@ import { appsRoute } from "../+apps/apps.route";
 import { buildURL } from "../../navigation";
 
 export const helmChartsRoute: RouteProps = {
-  path: appsRoute.path + "/charts/:repo?/:chartName?"
+  path: "/apps-charts/:repo?/:chartName?"
 }
 
 export interface IHelmChartsRouteParams {

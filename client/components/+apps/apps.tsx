@@ -1,14 +1,16 @@
 import React from "react";
 import store from 'store'
-import { Redirect, Route, Switch } from "react-router";
-import { Trans } from "@lingui/macro";
-import { MainLayout, TabRoute } from "../layout/main-layout";
-import { HelmCharts, helmChartsRoute, helmChartsURL } from "../+apps-helm-charts";
-import { HelmReleases, releaseRoute, releaseURL } from "../+apps-releases";
-import { namespaceStore } from "../+namespaces/namespace.store";
-import { configStore } from "../../../client/config.store";
-import { clusterURL } from "../+cluster/cluster.routes";
-import { workloadsURL } from "../+workloads/workloads.route";
+import {Redirect, Route, Switch} from "react-router";
+import {Trans} from "@lingui/macro";
+import {MainLayout, TabRoute} from "../layout/main-layout";
+import {HelmCharts, helmChartsRoute, helmChartsURL} from "../+apps-helm-charts";
+import {HelmReleases, releaseRoute, releaseURL} from "../+apps-releases";
+import {namespaceStore} from "../+namespaces/namespace.store";
+import {configStore} from "../../../client/config.store";
+import {clusterURL} from "../+cluster/cluster.routes";
+import {workloadsURL} from "../+workloads/workloads.route";
+import {ZookeeperClusters} from "../+apps-zookeeper-cluster";
+import {zookeeperClusterRoute, zookeeperClusterURL} from "../+apps-zookeeper-cluster/zookeeper-cluster.route";
 
 
 export class Apps extends React.Component {
@@ -26,6 +28,12 @@ export class Apps extends React.Component {
         component: HelmReleases,
         url: releaseURL({ query }),
         path: releaseRoute.path,
+      },
+      {
+        title: <Trans>Zookeeper Cluster</Trans>,
+        component: ZookeeperClusters,
+        url: zookeeperClusterURL({ query }),
+        path: zookeeperClusterRoute.path,
       },
     ]
   }
